@@ -1,0 +1,15 @@
+.body{
+    background-color: darkseagreen;
+}
+#score_span{
+    font-size: 18px;
+    margin-left:60px;
+}
+#timer_span{
+    font-size: 18px;
+    float:right;
+    margin-right:60px;
+}
+#draw_sketch{
+    color:indianred;
+}
