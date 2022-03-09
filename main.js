@@ -7,3 +7,40 @@ timer_counter=0;
 timer_check="";
 answer_holder="";
 score=0;
+
+function draw(){
+    check_sketch();
+    if("draw_sketch"=array_element){
+        answer_holder="set";
+        score=score+1;
+        score("score_span");
+    }
+} 
+
+function check_sketch(){
+    timer_counter=timer_counter+1;
+    timer_counter("timer_span");
+    console.log("timer_counter").value;
+    if("timer_counter".value > 400){
+        timer_counter=0;
+        timer_check="completed";
+    }
+    if("timer_check".value = "completed"){
+        timer_check="";
+        updateCanvas();
+    }
+    if("answer_holder".value = "set"){
+        answer_holder="";
+        updateCanvas();
+    }
+}
+
+function updateCanvas(){
+    background("white");
+}
+
+function setup(){
+    canvas=createCanvas(280,280);
+    canvas.center();
+    background("white");
+}
